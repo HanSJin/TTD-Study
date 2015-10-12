@@ -8,6 +8,26 @@
 
 #import "Question.h"
 
-@implementation Question
+@implementation Question {
+    NSMutableSet *answerSet;
+}
+@synthesize date;
+@synthesize title;
+@synthesize score;
+
+- (id)init {
+    if ((self = [super init])) {
+        answerSet = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)addAnswer:(Answer *)answer {
+    [answerSet addObject:answer];
+}
+
+- (NSArray *)answers {
+    return [[answerSet allObjects] sortedArrayUsingSelector:@selector(compare:)];
+}
 
 @end

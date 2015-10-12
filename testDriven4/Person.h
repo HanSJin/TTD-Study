@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
+@property (readonly) NSString *name;
+@property (readonly) NSURL *avatarURL;
+
+- (id)initWithName:(NSString *)aName avatarLocation:(NSString *)location;
 
 @end

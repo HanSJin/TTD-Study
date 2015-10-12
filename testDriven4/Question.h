@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Answer.h"
 
 @interface Question : NSObject
+
+@property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) NSString *title;
+@property (nonatomic) int score;
+
+@property (readonly) NSArray *answers;
+
+- (void)addAnswer:(Answer *)answer;
 
 @end

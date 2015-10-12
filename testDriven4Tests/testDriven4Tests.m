@@ -7,8 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Topic.h"
 
-@interface testDriven4Tests : XCTestCase
+@class Topic;
+
+@interface testDriven4Tests : XCTestCase {
+    Topic *topic;
+}
 
 @end
 
@@ -17,17 +22,29 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+//    topic = [[Topic alloc] initWithName:@"iPhone" tag:@"iPhone"];
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+//    topic = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
+//- (void)testThatTopicExists {
+////    Topic *newTopic = [[Topic alloc] initWithName:@"iPhone" tag:@"iPhone"];
+//    XCTAssertNotNil(topic, @"should be able to create a Topic instance");
+//}
+//
+//- (void)testThatTopicCanBeNamed {
+////    Topic *namedTopic = [[Topic alloc] initWithName:@"iPhone" tag:@"iPhone"];
+//    XCTAssertEqualObjects(topic.name, @"iPhone", @"The Topic Should have the name I gave it");
+//}
+//
+//- (void)testThatTopicHasATag {
+////    Topic *taggedTopic = [[Topic alloc] initWithName:@"iPhone" tag:@"iPhone"];
+//    XCTAssertEqualObjects(topic.tag, @"iPhone", @"The Topic need to have tags");
+//}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
@@ -35,5 +52,10 @@
         // Put the code you want to measure the time of here.
     }];
 }
+//
+//- (void)testForAListOfQuestions {
+////    XCTAssertTrue([[topic recentQuestions] isKindOfCalss:[NSArray class]], @"Topics should provide a list of recent questions");
+//    XCTAssertTrue([[topic recentQuestions] isKindOfClass:[NSArray class]], @"Topics should provide a list of recent questions");
+//}
 
 @end
