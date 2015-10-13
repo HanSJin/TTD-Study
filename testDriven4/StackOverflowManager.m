@@ -9,5 +9,5 @@
 #import "StackOverflowManager.h"
 
 @implementation StackOverflowManager
-@synthesize delegate;
+//@synthesize delegate;
 @end

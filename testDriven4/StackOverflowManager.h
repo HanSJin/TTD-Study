@@ -10,6 +10,6 @@
 
 @interface StackOverflowManager : NSObject
 
-@property (weak) id<StackOverflowManagerDelegate> delegate;
+//@property (weak) id<StackOverflowManagerDelegate> delegate;
 
 @end
