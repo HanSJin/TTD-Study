@@ -8,7 +8,6 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import "XCTest/XCTest.h"
 
 @interface MasterViewController ()
 
